@@ -11,6 +11,7 @@ const Map = ({ setCoordinates, setBounds, coordinates, places, setChildClicked, 
   const isDesktop = useMediaQuery("(min-width: 600px)");
 
 
+
   return (
     <div className={classes.mapContainer}>
       <GoogleMapReact
