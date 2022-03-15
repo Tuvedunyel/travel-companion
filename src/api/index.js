@@ -12,10 +12,32 @@ export const getPlacesData = async (type, sw, ne) => {
           tr_latitude: ne.lat,
           bl_longitude: sw.lng,
           tr_longitude: ne.lng,
-          limit: "10",
+          limit: "20",
         },
         headers: {
           "x-rapidapi-host": "travel-advisor.p.rapidapi.com",
+          "x-rapidapi-key":
+            "456d9b1ebcmsh24bab5b13d6d140p15ad0ajsnc451d8ba7d4b",
+        },
+      }
+    );
+    return data;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const getWeatherData = async (lat, lng) => {
+  try {
+    const { data } = await axios.get(
+      "https://community-open-weather-map.p.rapidapi.com/find",
+      {
+        params: {
+          lon: lng,
+          lat: lat,
+        },
+        headers: {
+          "x-rapidapi-host": "community-open-weather-map.p.rapidapi.com",
           "x-rapidapi-key":
             "456d9b1ebcmsh24bab5b13d6d140p15ad0ajsnc451d8ba7d4b",
         },
