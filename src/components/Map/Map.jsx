@@ -4,13 +4,18 @@ import Rating from "@material-ui/lab/Rating";
 import GoogleMapReact from "google-map-react";
 import React from "react";
 import useStyles from "./styles";
-import mapStyles from './mapStyles'
+import mapStyles from "./mapStyles";
 
-const Map = ({ setCoordinates, setBounds, coordinates, places, setChildClicked, weatherData }) => {
+const Map = ({
+  setCoordinates,
+  setBounds,
+  coordinates,
+  places,
+  setChildClicked,
+  weatherData,
+}) => {
   const classes = useStyles();
   const isDesktop = useMediaQuery("(min-width: 600px)");
-
-
 
   return (
     <div className={classes.mapContainer}>
