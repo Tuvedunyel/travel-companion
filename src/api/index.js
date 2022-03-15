@@ -13,6 +13,7 @@ export const getPlacesData = async (sw, ne) => {
         tr_latitude: ne.lat,
         bl_longitude: sw.lng,
         tr_longitude: ne.lng,
+        limit: '10'
       },
       headers: {
         "x-rapidapi-host": "travel-advisor.p.rapidapi.com",
